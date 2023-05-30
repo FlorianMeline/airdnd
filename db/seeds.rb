@@ -13,10 +13,24 @@ User.destroy_all
 
 puts "Creating users..."
 glandalf    = User.create!(name: "Glandalf le Gland", email: "glandalf@sarouelmandsl.com", password: "azerty")
+file = File.open(Rails.root.join("db/seeds/users/glandaf.png"))
+glandalf.avatar.attach(io: file, filename: "user.png", content_type: "image/png")
+
 jean  = User.create!(name: "Jean Neige", email: "jean-neige@ariadls.com", password: "azerty")
+file = File.open(Rails.root.join("db/seeds/users/jean neige.png"))
+jean.avatar.attach(io: file, filename: "team.png", content_type: "image/png")
+
 sam  = User.create!(name: "Sam Kenji", email: "samisam@lacomté.com", password: "azerty")
+file = File.open(Rails.root.join("db/seeds/users/sam kenji.png"))
+sam.avatar.attach(io: file, filename: "team.png", content_type: "image/png")
+
 degolas = User.create!(name: "Degolas Plindhwil", email: "degolaszebest@elf.com", password: "azerty")
+file = File.open(Rails.root.join("db/seeds/users/degolasse.png"))
+degolas.avatar.attach(io: file, filename: "team.png", content_type: "image/png")
+
 gordon = User.create!(name: "Trash Gordon", email: "gordon@trash.com", password: "azerty")
+file = File.open(Rails.root.join("db/seeds/users/trash gordon.png"))
+gordon.avatar.attach(io: file, filename: "team.png", content_type: "image/png")
 
 puts "Creating teams..."
 team_berserkers = Team.create!(

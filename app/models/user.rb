@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :teams, foreign_key: :owner_id
   has_many :contracts, foreign_key: :renter_id
+  has_one_attached :avatar
 end
