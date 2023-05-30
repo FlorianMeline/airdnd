@@ -1,20 +1,23 @@
-<h2>Log in</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
-                required: false,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
-
-  <div class="form-actions">
+<div>
+<%= image_tag "logo.png"  %>
+</div>
+<h2 class= "h2-log-in" >AIR DnD</h2>
+<div class="container container-log-in">
+  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="form-inputs gap-2 col-4 mx-auto ">
+      <%= f.input :email,
+                  required: false,
+                  autofocus: true,
+                  input_html: { autocomplete: "email" } %>
+      <%= f.input :password,
+                  required: false,
+                  input_html: { autocomplete: "current-password" } %>
+      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+    </div>
+</div>
+  <div type="button" class="btn btn-primary btn-lg d-grid gap-2 col-2 mx-auto">
     <%= f.button :submit, "Log in" %>
-  </div>
 <% end %>
+  </div>
 
 <%= render "devise/shared/links" %>
