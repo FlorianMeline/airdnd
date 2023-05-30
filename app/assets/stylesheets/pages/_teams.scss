@@ -1,0 +1,12 @@
+// .card{
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr;
+//   grid-gap: 50px;
+// }
+
+.card {
+  background-color: $eerie-black;
+  border-radius: 15px;
+  margin: 20px;
+  color: lightgray;
+}

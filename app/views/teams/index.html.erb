@@ -1,0 +1,17 @@
+<div class="title">
+<h1>Toutes nos équipes chaudes</h1>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+      <%@teams.each do |team| %>
+        <div class="card" style="width: 550px; height: 450px">
+          <%= cl_image_tag team.photo.key, class: "card-img-top"  %>
+          <div class="card-body">
+            <p class="card-text"><%= link_to team.name, team%></p>
+            <p><%= team.price_per_day %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
