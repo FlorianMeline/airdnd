@@ -1,12 +1,38 @@
-// .card{
-//   display: grid;
-//   grid-template-columns: 1fr 1fr 1fr;
-//   grid-gap: 50px;
-// }
 
-.card {
-  background-color: $eerie-black;
+.card-teams {
+  background-color: #373737;
   border-radius: 15px;
-  margin: 20px;
+  margin: 10px;
   color: lightgray;
+  // border: 1px solid $midnight-green;
+  box-shadow: 10px 5px 5px #121212;
+  transition: ease-in-out 0.8s;
+}
+
+.container-teams{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+}
+
+.card-teams:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+  border: 1px solid $butterscotch;
+}
+
+.teams-link{
+  text-decoration: none !important;
+  color: white !important;
+}
+
+.team-image{
+  border-radius: 15px 15px 0px 0px;
+}
+
+.banner-teams{
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  object-position: 25% 22%;
 }
