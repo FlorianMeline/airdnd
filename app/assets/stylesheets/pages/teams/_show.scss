@@ -1,0 +1,49 @@
+.banner-show {
+  background-size: cover;
+  padding: 225px 0;
+  background-position: 25% 15%;
+  border-bottom: 4px solid #999999;
+  border-top: 4px solid #999999;
+}
+
+.contain-team {
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+
+.team-owner {
+  border-radius: 100px;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  position: absolute;
+  top: 680px; left: 770px;
+}
+
+.reservation {
+  margin-top: 30px;
+  background-color: #373737;
+  margin-left: 6em;
+  box-shadow: 10px 5px 5px #121212;
+  border-radius: 20px;
+}
+
+.header-reservation {
+  background-color: #999999;
+}
+
+
+.text-color-card {
+  color: black;
+}
+
+.description {
+  padding-top: 3em;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  padding-bottom: 3em;
+}
+
+.name-team {
+  margin-bottom: 40px;
+}
