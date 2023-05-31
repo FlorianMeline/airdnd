@@ -3,8 +3,11 @@
   text-transform: capitalize;
 }
 
-.logo-log-in {
-  display: block;
+.log-in-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .links-log-in-page {

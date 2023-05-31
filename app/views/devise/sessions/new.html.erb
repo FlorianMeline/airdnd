@@ -1,10 +1,11 @@
-<div>
-<%= image_tag "logo.png"  %>
-</div>
+<div class="log-in-container">
+
+<%= image_tag "logo.png", width: 400, height: 400 %>
+
 <h2 class= "h2-log-in" >AIR DnD</h2>
 <div class="container container-log-in">
   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="form-inputs gap-2 col-4 mx-auto ">
+    <div class="form-inputs col-4 mx-auto ">
       <%= f.input :email,
                   required: false,
                   autofocus: true,
@@ -15,9 +16,11 @@
       <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
     </div>
 </div>
-  <div type="button" class="btn btn-primary btn-lg d-grid gap-2 col-2 mx-auto">
+  <div type="button" class="btn btn-primary btn-lg d-grid col-2 mb-2">
     <%= f.button :submit, "Log in" %>
 <% end %>
   </div>
+  <%= link_to "back to home", root_path %>
 
 <%= render "devise/shared/links" %>
+</div>

@@ -2,7 +2,7 @@
   <%= link_to "Log in", new_session_path(resource_name) %><br />
 <% end %>
 
-<div class="links-log-in-page gap-2 col-4 mx-auto p-3">
+<div class="links-log-in-page col-4 m-1">
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
   <%= link_to "Sign up", new_registration_path(resource_name) %><br />
 <% end %>
