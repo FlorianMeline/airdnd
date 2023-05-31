@@ -1,30 +1,15 @@
-<%= render "teams/banner-show",team: @team %>
-<br>
-<div class="row d-flex">
-  <div class="contain-team col-6">
-    <h1><%= @team.name%></h1>
-    <br>
-    <p><%= @team.description%></p>
-    <br>
-    <span class="border-bottom  border-white"></span>
-    <br>
-      <div>
-        <%= @team.success_rate%>
-      </div>
+<div>
+  <%= render "teams/banner-show",team: @team %>
+</div>
+<div class="d-flex justify-content-evenly contain-team">
+  <div class="col-5">
+    <div class="justify-content-between">
+      <h1 class="name-team"><%= @team.name%> ⚔️</h1>
+      <%=cl_image_tag @team.owner.avatar.key, class: "team-owner"%>
+    </div>
+    <p class="description"><%= @team.description%></p>
   </div>
-  <div class="card reservation" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Cras justo odio</li>
-      <li class="list-group-item">Dapibus ac facilisis in</li>
-      <li class="list-group-item">Vestibulum at eros</li>
-    </ul>
-    <div class="card-body">
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
+  <div class="col-4">
+    <%= render "teams/reservation-card"%>
   </div>
 </div>
