@@ -1,1 +1,71 @@
 // Specific CSS for your home-page
+.banner-homepage {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+.container-banner-home{
+  display: flex;
+  flex-direction: column;
+}
+.container-banner-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-homepage h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner-homepage p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+.banner-homepage button {
+  transition: 0.8s;
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  color: white;
+}
+.banner-homepage button:hover {
+  transition: 0.8s;
+  width: 250px;
+  height: 80px;
+  background-color: $butterscotch;
+  font-size: 20px;
+  border-radius: 50px;
+
+}
+.bannerlink {
+  text-decoration: none !important;
+  color: white !important;
+}
+
+.banner-login {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  text-decoration: none;
+  color: $light-gray;
+}
+.banner-login:hover {
+  color: $butterscotch;
+}
+
+.banner-logo {
+  width: 120px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
