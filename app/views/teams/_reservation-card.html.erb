@@ -1,19 +1,23 @@
-<div class="card reservation text-center" style="width: 18rem;">
+<div class="card reservation text-center" style="width: 25rem;">
   <div class="card-header header-reservation-padding">
-    <p>Book  <strong><%=@team.owner.name%></strong>'s  team </p>
+    <p class="fs-6">Engage l'équipe de  <strong><%=@team.owner.name%></strong></p>
   </div>
   <div class="card-body text-color-card header-reservation">
-    <div>
-    <p><strong><%=@team.price_per_day%> $ / day</strong></p>
-      <p>🔥<strong> <%= @team.success_rate%></strong> /5</p>
+  <br>
+    <div class="price-day-reservation-card">
+    <p class="fs-5"><strong><%=@team.price_per_day%> $ / jour</strong></p>
     </div>
-    <div>
-      <%= simple_form_for [@team, @contract] do |f| %>
-      <%= f.input :begin_date%>
-      <%= f.input :end_date %>
-      <%= f.button :submit, class: "btn btn-info" %>
-      <% end %>
-    </div>
+    <br>
+      <div class="container">
+        <div class="form-wrapper">
+          <%= simple_form_for [@team, @contract] do |f| %>
+            <%= f.input :begin_date, html5: true, label: 'date de début :' %>
+            <%= f.input :end_date,  html5: true, label: 'date de fin :' %>
+            <%= f.button :submit, "Soumettre un contrat", class: "btn btn-info" %>
+          <% end %>
+        </div>
+      </div>
+    <br>
   </div>
   <div class="card-footer">
   </div>

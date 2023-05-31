@@ -13,23 +13,19 @@
 
 .team-owner {
   border-radius: 100px;
-  width: 140px;
-  height: 140px;
+  width: 130px;
+  height: 130px;
   object-fit: cover;
-  position: absolute;
-  top: 680px; left: 770px;
+  border: 2px solid #999999;
 }
 
 .reservation {
   margin-top: 30px;
-  background-color: #373737;
+  background-color: #999999;
   margin-left: 6em;
   box-shadow: 10px 5px 5px #121212;
   border-radius: 20px;
-}
-
-.header-reservation {
-  background-color: #999999;
+  color: black;
 }
 
 
@@ -37,7 +33,7 @@
   color: black;
 }
 
-.description {
+.description-of-the-team {
   padding-top: 3em;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
@@ -48,6 +44,10 @@
   margin-bottom: 40px;
 }
 
-.header-reservation-padding {
+.header-reservation-padding{
   padding-top: 20px;
+}
+
+.price-day-reservation-card {
+  border-bottom: 1px solid #373737;
 }
