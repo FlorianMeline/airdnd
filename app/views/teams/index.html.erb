@@ -1,0 +1,24 @@
+<div class="dragon-banner">
+  <%= image_tag "dragon-banner.png", class: "banner-teams"%>
+    <div class="container">
+        <div class="row justify-content-center">
+        <div class="title" style="ml-10">
+        <h1>Découvrez nos équipes de pillards</h1>
+    </div>
+  </div>
+      <div class="col container-teams">
+        <%@teams.each do |team| %>
+          <div class="card card-teams" style="width: 400px;">
+            <%= cl_image_tag team.photo.key, class: "card-img-top team-image"  %>
+              <div class="card-body">
+                <h2 class="card-title"> ⚔️ <%= link_to team.name, team, class: "teams-link"%></h2>
+                <p id="card-link" class="card-text">💰<%= team.price_per_day %> /jour
+                <br>
+                🔥 <%= team.success_rate %> / 5</p>
+              </div>
+            </div>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>
