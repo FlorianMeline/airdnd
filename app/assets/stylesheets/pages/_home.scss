@@ -1,20 +1,26 @@
 // Specific CSS for your home-page
-.banner-homepage {
-  background-size: cover;
-  background-position: center;
+
+.banner-top{
   display: flex;
-  align-items: flex-end;
-  position: relative;
+  // flex-direction: column;
+  justify-content: space-between;
+  margin-inline: 100px;
+  padding: auto;
+  align-items: center;
 }
+
+.user-picture-home{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
 .container-banner-home{
   display: flex;
   flex-direction: column;
-}
-.container-banner-button {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  margin-top: 380px;
+  padding-left: 70px;
 }
 
 .banner-homepage h1 {
@@ -24,38 +30,57 @@
   font-size: 32px;
   font-weight: bold;
 }
-
+.banner-homepage {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+}
 .banner-homepage p {
   font-size: 20px;
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
-.banner-homepage button {
+
+a.bannerlink{
   transition: 0.8s;
   width: 200px;
   height: 50px;
   border-radius: 25px;
   color: white;
+  text-decoration: none;
+  text-align: center;
+  background-color: $midnight-green;
+  justify-content: bottom;
+  padding-top: 12px;
+
 }
-.banner-homepage button:hover {
+
+a.bannerlink:hover {
   transition: 0.8s;
   width: 250px;
   height: 80px;
   background-color: $butterscotch;
   font-size: 20px;
   border-radius: 50px;
+  padding-top: 23px;
 
 }
-.bannerlink {
-  text-decoration: none !important;
-  color: white !important;
+
+.container-banner-button {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
 }
 
 .banner-login {
-  position: absolute;
-  top: 1em;
-  right: 1em;
+  // position: absolute;
+  // top: 1em;
+  // right: 1em;
   text-decoration: none;
   color: $light-gray;
 }
@@ -65,7 +90,7 @@
 
 .banner-logo {
   width: 120px;
-  position: absolute;
-  top: 0;
-  left: 0;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
 }

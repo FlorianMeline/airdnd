@@ -1,12 +1,27 @@
 <div class="banner-homepage" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path "banner-bg.png"%>); height: 100vh;">
-    <%= link_to "Login", new_user_session_path, class: "banner-login" %>
+  <div class="container banner-top">
     <%= image_tag "logo.png", class: "banner-logo" %>
-  <div class="container container-banner-home"  style="padding-bottom: 4em;">
-        <h1><strong>AIR DnD</strong></h1>
-          <h3>Engage l'équipe de tes rêves</h3>
-            <p>🔥 Mets toutes les chances de ton côté !🔥</p>
-      <div class ="container-banner-button">
-        <button  type="button" class="btn btn-primary"><%= link_to "Partez à l'aventure", teams_path, class: "bannerlink" %></button>
-      </div>
+    <ul class="navbar-nav ">
+      <% if current_user %>
+        <li class="nav-item dropdown">
+          <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= cl_image_tag @user.avatar.key, class: "user-picture-home", width: 100, height: 100, crop: :fill%>
+          </a>
+          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+          </div>
+        </li>
+      <% else %>
+        <%= link_to "Login", new_user_session_path, class: "banner-login" %>
+      <% end %>
+    </ul>
+  </div>
+  <div class="container container-banner-home">
+    <h1><strong>AIR DnD</strong></h1>
+    <h3>Engage l'équipe de tes rêves</h3>
+    <p>🔥 Mets toutes les chances de ton côté !🔥</p>
+  </div>
+  <div class ="container container-banner-button" style="padding-bottom: 7em;">
+    <%= link_to "Partez à l'aventure", teams_path, class: "bannerlink" %>
   </div>
 </div>
