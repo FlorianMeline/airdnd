@@ -1,0 +1,34 @@
+.card-user-teams{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+}
+
+.card-user-team:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+  border: 1px solid $butterscotch;
+}
+
+.card-user-team {
+  background-color: #373737;
+  border-radius: 15px;
+  margin: 10px;
+  color: lightgray;
+  // border: 1px solid $midnight-green;
+  box-shadow: 10px 5px 5px #121212;
+  transition: ease-in-out 0.8s;
+}
+
+.user-team-image{
+  border-radius: 15px 15px 0px 0px;
+}
+
+.titre-teams{
+  margin-top: 20px;
+}
+
+.border-user-teams{
+  border-bottom: 1px solid white;
+  padding: 20px;
+}
