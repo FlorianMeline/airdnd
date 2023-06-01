@@ -1,0 +1,28 @@
+
+.card-contracts {
+  background-color: #373737;
+  border-radius: 15px;
+  margin: 8px;
+  color: lightgray;
+  // border: 1px solid $midnight-green;
+  box-shadow: 10px 5px 5px #121212;
+  transition: ease-in-out 0.8s;
+}
+
+.container-contracts{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+  text-decoration: none;
+}
+
+.card-contracts:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+  border: 1px solid $butterscotch;
+}
+
+.border-title-reservation{
+  padding-bottom: 25px;
+  border-bottom: 1px solid white;
+}

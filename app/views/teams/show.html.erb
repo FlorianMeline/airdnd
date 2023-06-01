@@ -4,8 +4,12 @@
 <div class="d-flex justify-content-evenly contain-team">
   <div class="col-5">
     <div class="d-flex justify-content-between">
-      <h1 class="name-team">⚔️ <%= @team.name%> </h1>
-      <p class="align-self-center pb-3 fs-5"><strong> <%= @team.success_rate%></strong> /5  🔥</p>
+    <div>
+    <h1 class="name-team">⚔️ <%= @team.name%> </h1>
+      <p class="align-self-end">🏰<%= @team.dungeon_type%></p>
+    </div>
+
+      <p class="align-self-end fs-5"><strong> <%= @team.success_rate%></strong> /5  🔥</p>
     </div>
     <p class="description-of-the-team"><%= @team.description%></p>
     <div class="d-flex">

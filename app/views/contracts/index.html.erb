@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="border-title-reservation"><h1 class="mt-5">Mes réservations </h1> </div>
+  <div class="col container-contracts mt-4">
+    <%@contracts.each do |contract| %>
+      <div class="card card-contracts" style="width: 400px;">
+    <%= link_to team_path(contract.team) do%>
+        <%= cl_image_tag contract.team.photo.key, class: "card-img-top team-image"  %>
+          <div class="card-body">
+            <h2 class="card-title">  <%= link_to contract.team.name, contract.team, class: "teams-link"%></h2>
+            <p id="card-link" class="card-text justify-content-end">Prix du contrat : <%= contract.total_price %> ₡</p>
+            <p>Statue de ma demande : <%= contract.status%></p>
+          </div>
+      </div>
+    <% end %>
+    <% end %>
+  </div>
+</div>
