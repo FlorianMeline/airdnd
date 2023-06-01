@@ -1,11 +1,13 @@
-class Owner::TeamsController < ApplicationController
-  def index
-    @user_teams = current_user.teams
-  end
+module Owner
+  class TeamsController < ApplicationController
+    def index
+      @user_teams = current_user.teams
+    end
 
-  def new
-  end
+    def new
+    end
 
-  def create
+    def create
+    end
   end
 end
