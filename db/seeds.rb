@@ -1,11 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
-
 puts "Cleaning database..."
 Contract.destroy_all
 Team.destroy_all
@@ -32,6 +24,8 @@ gordon = User.create!(name: "Trash Gordon", email: "gordon@trash.com", password:
 file = File.open(Rails.root.join("db/seeds/users/trash gordon.png"))
 gordon.avatar.attach(io: file, filename: "team.png", content_type: "image/png")
 
+puts "Users created"
+
 puts "Creating teams..."
 team_berserkers = Team.create!(
   owner: glandalf,
@@ -47,7 +41,8 @@ team_berserkers = Team.create!(
   magie obscure, prête à défier les conventions et à laisser leur marque dans les récits
   épiques de ce monde troublant.",
   success_rate: 4,
-  price_per_day: 1000
+  price_per_day: 1000,
+  dungeon_type: "Héroïque"
 )
 
 file = File.open(Rails.root.join("db/seeds/teams/les-berserkers.png"))
@@ -63,7 +58,8 @@ team_belles = Team.create!(
   équipe redoutable dont la réputation se répand comme une légende dans les
   contrées épiques où elles se frayent un chemin",
   success_rate: 4,
-  price_per_day: 2500
+  price_per_day: 2500,
+  dungeon_type: "Héroïque"
 )
 
 file = File.open(Rails.root.join("db/seeds/teams/les-belles-et-la-bete.png"))
@@ -80,7 +76,8 @@ team_meteor = Team.create!(
   la force brute du dragon, prêts à terrasser leurs ennemis avec une fureur inégalée et
   à laisser une empreinte légendaire dans les récits épiques de ce monde fantastique.",
   success_rate: 5,
-  price_per_day: 400
+  price_per_day: 400,
+  dungeon_type: "Légendaire"
 )
 
 file = File.open(Rails.root.join("db/seeds/teams/meteore.png"))
@@ -95,7 +92,8 @@ redoutables adversaires, tandis que le dragon déploie ses ailes majestueuses, p
 Ensemble, ils forment une équipe légendaire, où la férocité et la résilience se mêlent pour engendrer une force invincible,
 dont le nom sera chanté à travers les âges.",
   success_rate: 1,
-  price_per_day: 500
+  price_per_day: 500,
+  dungeon_type: "Commun"
 )
 file = File.open(Rails.root.join("db/seeds/teams/troll-neige-et-les-deux-nains.png"))
 team_troll.photo.attach(io: file, filename: "team.png", content_type: "image/png")
@@ -109,7 +107,8 @@ team_trinite = Team.create!(
   Ensemble, cette équipe hétéroclite incarne un équilibre délicat entre la beauté, la puissance et la joie, prête à défendre les terres ravagées
   par les ombres avec une détermination inébranlable. ",
   success_rate: 3,
-  price_per_day: 1250
+  price_per_day: 1250,
+  dungeon_type: "Héroïque"
 )
 file = File.open(Rails.root.join("db/seeds/teams/la-sainte-trinite.png"))
 team_trinite.photo.attach(io: file, filename: "team.png", content_type: "image/png")
@@ -123,7 +122,8 @@ team_samaritains = Team.create!(
   et que la mage féminine manipule les énergies mystiques pour invoquer des sortilèges dévastateurs. Ensemble, cette équipe hétéroclite incarne la
   force brute, la précision mortelle et la magie envoûtante, prête à affronter les défis les plus redoutables et à laisser une légende derrière elle.",
   success_rate: 2,
-  price_per_day: 700
+  price_per_day: 700,
+  dungeon_type: "Commun"
 )
 file = File.open(Rails.root.join("db/seeds/teams/les-bons-samaritain.png"))
 team_samaritains.photo.attach(io: file, filename: "team.png", content_type: "image/png")
@@ -141,7 +141,8 @@ team_mordor = Team.create!(
   impie, prête à semer la terreur et à assouvir leurs sombres desseins, dans une
   symphonie macabre qui ébranlera les fondements du monde.",
   success_rate: 4,
-  price_per_day: 1600
+  price_per_day: 1600,
+  dungeon_type: "Légendaire"
 )
 file = File.open(Rails.root.join("db/seeds/teams/les-anges-du-mordor.png"))
 team_mordor.photo.attach(io: file, filename: "team.png", content_type: "image/png")
@@ -159,7 +160,8 @@ team_culte = Team.create!(
   embrassant les ténèbres et semant la destruction sur leur passage, dans le cadre
   des machinations de leur culte mystérieux.",
   success_rate: 5,
-  price_per_day: 1500
+  price_per_day: 1500,
+  dungeon_type: "Légendaire"
 )
 file = File.open(Rails.root.join("db/seeds/teams/le-culte.png"))
 team_culte.photo.attach(io: file, filename: "team.png", content_type: "image/png")
@@ -177,7 +179,8 @@ team_ombres = Team.create!(
   redoutable, combinant force brute, magie vaudou et art mortel de l'assassinat, prête
   à déjouer les plans des plus puissants ennemis et à écrire leur propre légende.",
   success_rate: 4,
-  price_per_day: 1000
+  price_per_day: 1000,
+  dungeon_type: "Héroïque"
 )
 file = File.open(Rails.root.join("db/seeds/teams/briseurs-d_ombre.png"))
 team_ombres.photo.attach(io: file, filename: "team.png", content_type: "image/png")
@@ -194,7 +197,8 @@ team_peste = Team.create!(
   plus précieuses. Ensemble, ils défient les attentes, apportant chaos et hilarité, et
   formant une équipe dont les exploits ne manqueront pas de faire parler d'eux.",
   success_rate: 2,
-  price_per_day: 700
+  price_per_day: 700,
+  dungeon_type: "Commun"
 )
 file = File.open(Rails.root.join("db/seeds/teams/la-peste-le-velu-et-le-cambrioleur.png"))
 team_peste.photo.attach(io: file, filename: "team.png", content_type: "image/png")
@@ -212,11 +216,13 @@ team_protecteurs = Team.create!(
   affronter les défis les plus redoutables et à inscrire leur nom dans les annales des
   héros",
   success_rate: 3,
-  price_per_day: 600
+  price_per_day: 600,
+  dungeon_type: "Héroïque"
 )
 file = File.open(Rails.root.join("db/seeds/teams/les-protecteurs.png"))
 team_protecteurs.photo.attach(io: file, filename: "team.png", content_type: "image/png")
 
+puts "Teams created"
 puts "Generating contract..."
 Contract.create!(
   renter: sam,
@@ -226,7 +232,7 @@ Contract.create!(
   total_price: 10_000,
   status: "pending"
 )
-puts "Generating contract ..."
+
 Contract.create!(
   renter: degolas,
   team: team_belles,
@@ -235,7 +241,7 @@ Contract.create!(
   total_price: 15_000,
   status: "pending"
 )
-puts "Generating contract ..."
+
 Contract.create!(
   renter: glandalf,
   team: team_meteor,
@@ -244,7 +250,7 @@ Contract.create!(
   total_price: 1_600,
   status: "pending"
 )
-puts "Generating contract ..."
+
 Contract.create!(
   renter: sam,
   team: team_troll,
@@ -253,7 +259,7 @@ Contract.create!(
   total_price: 7_500,
   status: "pending"
 )
-puts "Generating contract ..."
+
 Contract.create!(
   renter: jean,
   team: team_trinite,
@@ -262,7 +268,7 @@ Contract.create!(
   total_price: 22_500,
   status: "pending"
 )
-puts "Generating contract ..."
+
 Contract.create!(
   renter: jean,
   team: team_samaritains,
@@ -271,7 +277,7 @@ Contract.create!(
   total_price: 16_100,
   status: "pending"
 )
-puts "Generating contract ..."
+
 Contract.create!(
   renter: sam,
   team: team_mordor,
@@ -280,7 +286,7 @@ Contract.create!(
   total_price: 446_400,
   status: "pending"
 )
-puts "Generating contract ..."
+
 Contract.create!(
   renter: gordon,
   team: team_culte,
@@ -289,7 +295,7 @@ Contract.create!(
   total_price: 13_500,
   status: "pending"
 )
-puts "Generating contract ..."
+
 Contract.create!(
   renter: gordon,
   team: team_ombres,
@@ -298,7 +304,7 @@ Contract.create!(
   total_price: 8_000,
   status: "pending"
 )
-puts "Generating contract ..."
+
 Contract.create!(
   renter: jean,
   team: team_protecteurs,
@@ -307,5 +313,5 @@ Contract.create!(
   total_price: 5_400,
   status: "pending"
 )
-
+puts "Contracts created"
 puts "Finished!"
