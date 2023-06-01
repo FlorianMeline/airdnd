@@ -1,0 +1,12 @@
+<div class="banner-homepage" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path "banner-bg.png"%>); height: 100vh;">
+    <%= link_to "Login", new_user_session_path, class: "banner-login" %>
+    <%= image_tag "logo.png", class: "banner-logo" %>
+  <div class="container container-banner-home"  style="padding-bottom: 4em;">
+        <h1><strong>AIR DnD</strong></h1>
+          <h3>Engage l'équipe de tes rêves</h3>
+            <p>🔥 Mets toutes les chances de ton côté !🔥</p>
+      <div class ="container-banner-button">
+        <button  type="button" class="btn btn-primary"><%= link_to "Partez à l'aventure", teams_path, class: "bannerlink" %></button>
+      </div>
+  </div>
+</div>
