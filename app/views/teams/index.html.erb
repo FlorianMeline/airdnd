@@ -1,23 +1,32 @@
-<div class="dragon-banner">
-  <%= image_tag "dragon-banner.png", class: "banner-teams"%>
-    <div class="container">
-        <div class="row justify-content-center">
+<div class="dragon-banner"><%= image_tag "dragon-banner.png", class: "banner-teams"%></div>
+  <div class="container mb-4">
+    <%= form_tag teams_path, method: :get do %>
+      <div class="input-group margin-search-bar rounded mb-3">
+        <%= text_field_tag :query, params[:query], placeholder: "recherche une équipe", class: "form-control rounded", aria_label: "search", aria_describedby: "search-addon"  %>
+        <%= submit_tag "Recherche ton équipe", class: 'btn btn-primary'%>
+        <% end %>
+      </div>
+      <div class="row justify-content-center">
         <div class="title" style="ml-10">
-        <h1 class="titre-teams">Découvrez nos équipes de pillards</h1>
-    </div>
-  </div>
-      <div class="col container-teams">
+          <h1 class="titre-teams">Découvrez nos équipes de pillards</h1>
+        </div>
+      </div>
+      <div class="col container-teams mt-4">
         <%@teams.each do |team| %>
-          <div class="card card-teams" style="width: 400px;">
+          <div class="card card-teams mt-5" style="width: 400px;">
+            <%= link_to team_path(team), style:"text-decoration: none" do%>
             <%= cl_image_tag team.photo.key, class: "card-img-top team-image"  %>
               <div class="card-body">
                 <h2 class="card-title"> ⚔️ <%= link_to team.name, team, class: "teams-link"%></h2>
-                <p id="card-link" class="card-text">💰<%= team.price_per_day %> /jour
+                <p id="card-link" class="card-text">💰 <%= team.price_per_day %> ₡ /jour
                 <br>
-                🔥 <%= team.success_rate %> / 5</p>
+                🔥 <%= team.success_rate %> / 5
+                <br>
+                🏰 <%= team.dungeon_type%></p>
               </div>
             </div>
-          <% end %>
+        <% end %>
+        <% end %>
       </div>
     </div>
   </div>
