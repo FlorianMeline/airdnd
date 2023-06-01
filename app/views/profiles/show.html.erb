@@ -1,0 +1,59 @@
+<div class="nav-profile d-flex justify-content-between">
+
+  <div class="d-flex p-5">
+    <%= cl_image_tag @user.avatar.key, class: "user-picture", width: 100, height: 100, crop: :fill%>
+      <h3 class="align-self-center p-5"><%= @user.name %></h3>
+  </div>
+
+  <%= link_to "Créer une équipe", owner_teams_path, class: "btn btn-primary btn-lg new-team-btn align-self-center align-text-center  m-5" %>
+
+</div>
+
+  <div class="container">
+
+    <div class="row col-6">
+      <button type="button" class="btn btn-primary">infos</button>
+        <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+    </div>
+
+    <div class="row col-6">
+      <button type="button" class="btn btn-primary">My teams</button>
+        <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+    </div>
+
+    <div class="row col-6">
+      <button type="button" class="btn btn-primary">My requests</button>
+        <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+    </div>
+
+    <div class="row col-6">
+      <button type="button" class="btn btn-primary">Booking status</button>
+        <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+    </div>
+
+  </div>
+</div>
