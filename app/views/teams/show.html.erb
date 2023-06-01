@@ -3,11 +3,18 @@
 </div>
 <div class="d-flex justify-content-evenly contain-team">
   <div class="col-5">
-    <div class="justify-content-between">
-      <h1 class="name-team"><%= @team.name%> ⚔️</h1>
-      <%=cl_image_tag @team.owner.avatar.key, class: "team-owner"%>
+    <div class="d-flex justify-content-between">
+      <h1 class="name-team">⚔️ <%= @team.name%> </h1>
+      <p class="align-self-center pb-3 fs-5"><strong> <%= @team.success_rate%></strong> /5  🔥</p>
     </div>
-    <p class="description"><%= @team.description%></p>
+    <p class="description-of-the-team"><%= @team.description%></p>
+    <div class="d-flex">
+        <%=cl_image_tag @team.owner.avatar.key, class: "team-owner"%>
+        <div class="align-self-end ps-4">
+          <h4><strong><%=@team.owner.name%></strong></h4>
+          <p>Entraineur et propriétaire de l'équipe </p>
+        </div>
+    </div>
   </div>
   <div class="col-4">
     <%= render "teams/reservation-card"%>
