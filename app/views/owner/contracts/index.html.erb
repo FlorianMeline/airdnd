@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="border-user-teams"><h1>Mes contracts</h1></div>
+  <div class="card-user-teams mt-4">
+    <% @user_contracts.each do |user_contract|%>
+        <div class="card card-user-team" style="width: 400px;">
+        <%= cl_image_tag user_contract.team.photo.key, class: "card-img-top team-image"  %>
+          <div class="card-body">
+            <h2 class="card-title">⚔️ <%= user_contract.team.name %></h2>
+            <p class="card-text">💰 <%= user_contract.total_price %> ₡</p>
+            <p class="card-text">Début de quête : <%= user_contract.begin_date %></p>
+            <p class="card-text">Fin de quête : <%= user_contract.end_date %></p>
+
+          </div>
+        </div>
+    <% end %>
+  </div>
+</div>
