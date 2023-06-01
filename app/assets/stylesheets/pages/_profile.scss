@@ -1,6 +1,6 @@
 .nav-profile {
   width: auto;
-  height: 200px;
+  height: 300px;
   background-color: #373737;
 }
 
@@ -9,17 +9,40 @@
   justify-content: center;
 }
 
-.new-team-btn:hover {
-
+.user-picture {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: solid 2px $butterscotch;
 }
 
-.user-picture {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
+.user-name {
+  text-shadow: 10px 5px 5px #121212;
 }
 
 .profile-box {
   width: auto;
   height: 100px;
+}
+
+.profile-card {
+  background-color: #373737;
+  border-radius: 15px;
+  color: lightgray;
+  box-shadow: 10px 5px 5px #121212;
+  transition: ease-in-out 0.8s;
+  width: 18rem;
+  text-decoration: none;
+}
+
+.profile-card:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  border: 1px solid $butterscotch;
+  color: lightgray;
+}
+
+.profile-img {
+  margin-top: 10px;
+  border-radius: 10px;
 }
