@@ -1,2 +1,24 @@
-<h1>Owner::Teams#new</h1>
-<p>Find me in app/views/owner/teams/new.html.erb</p>
+
+<div class= "container col-6">
+<h2>Nouvelle Equipe</h2>
+<%= simple_form_for(@team) do |f| %>
+  <%= f.input :name, label: "Nom", placeholder: "Entrez le nom votre équipe"%>
+  <%= f.input :description, label: "Description", placeholder: "Entrez la description de cette équipe"%>
+  <%= f.input :price_per_day, label: "Prix par jour", placeholder: "Entrez le prix a la jour"%>
+  <%= f.input :dungeon_type, label: "Type de Donjon favoris", placeholder: "Faite vore choix", collection: ["Commun","Heroique", "Légendaire"]%>
+    <%= f.button :submit, class: "btn btn-primary"%>
+<% end %>
+
+</div>
+
+
+ <%# create_table "teams", force: :cascade do |t|
+    t.bigint "owner_id", null: false
+    t.string "name"
+    t.text "description"
+    t.integer "price_per_day"
+    t.integer "success_rate"
+    t.string "dungeon_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["owner_id"], name: "index_teams_on_owner_id" %>
