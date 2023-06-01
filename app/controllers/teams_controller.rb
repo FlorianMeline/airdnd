@@ -9,4 +9,6 @@ class TeamsController < ApplicationController
     @contract = Contract.new
   end
 
+
+
 end
