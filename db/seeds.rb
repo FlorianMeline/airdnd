@@ -314,4 +314,5 @@ Contract.create!(
   status: "En attente"
 )
 puts "Contracts created"
+
 puts "Finished!"
