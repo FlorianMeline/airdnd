@@ -17,8 +17,8 @@
           </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Mon profil", profile_path, class:"dropdown-item" %>
-              <%= link_to "Mes contrats en attente", contracts_path, class:"dropdown-item" %>
-              <%= link_to "Mes équipes", contracts_path, class:"dropdown-item" %>
+              <%= link_to "Contrats", owner_contracts_path, class:"dropdown-item" %>
+              <%= link_to "Mes équipes", owner_teams_path, class:"dropdown-item" %>
               <%= link_to "Mes réservations", contracts_path, class:"dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
             </div>

@@ -17,5 +17,8 @@
 
     <%= render "shared/flashes" %>
     <%= yield %>
+    <% unless params[:action] == 'home' || devise_controller? %>
+      <%= render "shared/footer" %>
+    <% end %>
   </body>
 </html>
