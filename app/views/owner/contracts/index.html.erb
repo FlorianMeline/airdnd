@@ -9,7 +9,7 @@
             <p class="card-text">💰 <%= user_contract.total_price %> ₡</p>
             <p class="card-text">Début de quête : <%= user_contract.begin_date %></p>
             <p class="card-text">Fin de quête : <%= user_contract.end_date %></p>
-            <% if  user_contract.status == "pending" %>
+            <% if  user_contract.status == "en attente" %>
               <div class="d-flex justify-content-around">
                 <%= simple_form_for [:owner, user_contract] do |f| %>
                   <%= f.input :status, label: false, input_html: {value: 'accepted', class:"d-none", }%>
