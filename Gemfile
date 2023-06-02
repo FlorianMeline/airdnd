@@ -11,20 +11,21 @@ gem "jsbundling-rails"
 gem "turbo-rails"
 gem "stimulus-rails"
 gem "jbuilder"
-gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 gem "bootsnap", require: false
 gem "sassc-rails"
 gem "cloudinary"
-
+gem "pg_search"
 gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"
 gem "simple_form", github: "heartcombo/simple_form"
-group :development, :test do  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+group :development, :test do
+  gem "debug", platforms: %i[mri mingw x64_mingw]
   gem "dotenv-rails"
-
 end
 
-group :development do  gem "web-console"
+group :development do
+  gem "web-console"
 end
 
 group :test do

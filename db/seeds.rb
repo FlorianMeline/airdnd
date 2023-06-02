@@ -4,15 +4,15 @@ Team.destroy_all
 User.destroy_all
 
 puts "Creating users..."
-glandalf    = User.create!(name: "Glandalf le Gland", email: "glandalf@sarouelmandsl.com", password: "azerty")
+glandalf = User.create!(name: "Glandalf le Gland", email: "glandalf@sarouelmandsl.com", password: "azerty")
 file = File.open(Rails.root.join("db/seeds/users/glandaf.png"))
 glandalf.avatar.attach(io: file, filename: "user.png", content_type: "image/png")
 
-jean  = User.create!(name: "Jean Neige", email: "jean-neige@ariadls.com", password: "azerty")
+jean = User.create!(name: "Jean Neige", email: "jean-neige@ariadls.com", password: "azerty")
 file = File.open(Rails.root.join("db/seeds/users/jean neige.png"))
 jean.avatar.attach(io: file, filename: "team.png", content_type: "image/png")
 
-sam  = User.create!(name: "Sam Kenji", email: "samisam@lacomté.com", password: "azerty")
+sam  = User.create!(name: "Sam Kenji", email: "samisam@lacomte.com", password: "azerty")
 file = File.open(Rails.root.join("db/seeds/users/sam kenji.png"))
 sam.avatar.attach(io: file, filename: "team.png", content_type: "image/png")
 
@@ -230,7 +230,7 @@ Contract.create!(
   begin_date: "2023-07-15",
   end_date: "2023-07-25",
   total_price: 10_000,
-  status: "pending"
+  status: "En attente"
 )
 
 Contract.create!(
@@ -239,7 +239,7 @@ Contract.create!(
   begin_date: "2023-08-27",
   end_date: "2023-09-01",
   total_price: 15_000,
-  status: "pending"
+  status: "En attente"
 )
 
 Contract.create!(
@@ -248,7 +248,7 @@ Contract.create!(
   begin_date: "2023-06-01",
   end_date: "2023-06-04",
   total_price: 1_600,
-  status: "pending"
+  status: "En attente"
 )
 
 Contract.create!(
@@ -257,7 +257,7 @@ Contract.create!(
   begin_date: "2023-10-15",
   end_date: "2023-10-30",
   total_price: 7_500,
-  status: "pending"
+  status: "En attente"
 )
 
 Contract.create!(
@@ -266,7 +266,7 @@ Contract.create!(
   begin_date: "2023-11-11",
   end_date: "2023-11-29",
   total_price: 22_500,
-  status: "pending"
+  status: "En attente"
 )
 
 Contract.create!(
@@ -275,7 +275,7 @@ Contract.create!(
   begin_date: "2023-10-02",
   end_date: "2023-10-25",
   total_price: 16_100,
-  status: "pending"
+  status: "En attente"
 )
 
 Contract.create!(
@@ -284,7 +284,7 @@ Contract.create!(
   begin_date: "2024-06-06",
   end_date: "2023-09-01",
   total_price: 446_400,
-  status: "pending"
+  status: "En attente"
 )
 
 Contract.create!(
@@ -293,7 +293,7 @@ Contract.create!(
   begin_date: "2023-06-01",
   end_date: "2023-06-10",
   total_price: 13_500,
-  status: "pending"
+  status: "En attente"
 )
 
 Contract.create!(
@@ -302,7 +302,7 @@ Contract.create!(
   begin_date: "2023-05-04",
   end_date: "2023-06-12",
   total_price: 8_000,
-  status: "pending"
+  status: "En attente"
 )
 
 Contract.create!(
@@ -311,7 +311,7 @@ Contract.create!(
   begin_date: "2023-05-01",
   end_date: "2023-06-10",
   total_price: 5_400,
-  status: "pending"
+  status: "En attente"
 )
 puts "Contracts created"
 puts "Finished!"

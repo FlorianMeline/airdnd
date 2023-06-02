@@ -1,14 +1,22 @@
-<div class="container">
-  <div class="border-title-reservation"><h1 class="mt-5">Mes réservations </h1> </div>
+<div class="container padding-title">
+  <div class="border-title-reservation"><h1 class=" ml-2">Mes réservations </h1> </div>
   <div class="col container-contracts mt-4">
     <%@contracts.each do |contract| %>
       <div class="card card-contracts" style="width: 400px;">
-    <%= link_to team_path(contract.team) do%>
-        <%= cl_image_tag contract.team.photo.key, class: "card-img-top team-image"  %>
+    <%= link_to team_path(contract.team), style:"text-decoration: none" do%>
+        <%= cl_image_tag contract.team.photo.key, class: "card-img-top team-image"   %>
           <div class="card-body">
-            <h2 class="card-title">  <%= link_to contract.team.name, contract.team, class: "teams-link"%></h2>
-            <p id="card-link" class="card-text justify-content-end">Prix du contrat : <%= contract.total_price %> ₡</p>
-            <p>Statue de ma demande : <%= contract.status%></p>
+            <h2 class="card-title"> ⚔️  <%= link_to contract.team.name, contract.team, class: "teams-link", style:"text-decoration: none" %></h2>
+            <p id="card-link" class="card-text justify-content-end">💰<strong> <%= contract.total_price %> ₡</strong></p>
+            <p class="card-text">Début de quête : <%= contract.begin_date %></p>
+            <p class="card-text">Fin de quête : <%= contract.end_date %></p>
+            <% if  contract.status == "En attente" %>
+              <div class="d-flex justify-content-around text-info">En attente</div>
+              <% elsif contract.status == "accepted" %>
+              <div class="d-flex justify-content-around text-success">Accepté</div>
+              <% else %>
+              <div class="d-flex justify-content-around text-danger">Refusé</div>
+            <% end %>
           </div>
       </div>
     <% end %>
