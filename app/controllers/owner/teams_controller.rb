@@ -8,14 +8,17 @@ class Owner::TeamsController < ApplicationController
   end
 
   def create
-    team = Team.new(team_params)
-    team.owner = current_user
-    team.save
-    redirect_to teams_path
+    @team = Team.new(team_params)
+    @team.owner = current_user
+    if @team.save!
+      redirect_to owner_teams_path(@team.owner)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def team_params
-    params.require(:team).permit(:name, :description, :price_per_day, :dungeon_type)
+    params.require(:team).permit(:name, :description, :price_per_day, :dungeon_type, :photo)
   end
 
 end

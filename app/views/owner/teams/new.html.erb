@@ -1,24 +1,40 @@
+<div>
+  <div class= "container bg-img d-flex justify-content-center ">
+    <div  class= "container bloc-form body-img col-6 p-5">
+      <div class="d-flex justify-content-center">
+        <h2 class="m-5 h2-new">Nouvelle Equipe</h2>
+      </div>
+    <%= simple_form_for([:owner, @team]) do |f| %>
 
-<div class= "container col-6">
-<h2>Nouvelle Equipe</h2>
-<%= simple_form_for(@team) do |f| %>
-  <%= f.input :name, label: "Nom", placeholder: "Entrez le nom votre équipe"%>
-  <%= f.input :description, label: "Description", placeholder: "Entrez la description de cette équipe"%>
-  <%= f.input :price_per_day, label: "Prix par jour", placeholder: "Entrez le prix a la jour"%>
-  <%= f.input :dungeon_type, label: "Type de Donjon favoris", placeholder: "Faite vore choix", collection: ["Commun","Heroique", "Légendaire"]%>
-    <%= f.button :submit, class: "btn btn-primary"%>
-<% end %>
+    <%# name %>
+      <%= f.input :name, label: "Nom",label_html: { style: "text-shadow: 0px 2px 3px black;" }, placeholder: "Entrez le nom votre équipe"%>
 
+    <%# description %>
+      <%= f.input :description, label: "Description",label_html: { style: "text-shadow: 0px 2px 3px black;" }, placeholder: "Entrez la description de cette équipe"%>
+
+    <%# price %>
+      <%= f.input :price_per_day, label: "Prix par jour",label_html: { style: "text-shadow: 0px 2px 3px black;" }, placeholder: "Entrez le prix a la journée"%>
+
+    <%# donjon %>
+      <%= f.input :dungeon_type, label: "Type de Donjon favoris",label_html: { style: "text-shadow: 0px 2px 3px black;" }, prompt: "Faite vore choix", collection: ["Commun","Héroïque", "Légendaire"], class: "select-placeholder-color"%>
+
+    <%# photo %>
+    <div class="form-group">
+        <%= f.label :photo, label: "Photo",label_html: { style: "text-shadow: 0px 2px 3px black;" }, placeholder: "Ajoutez une photo a votre équipe", class: "text-imput" %>
+        <br>
+        <%= f.file_field :photo, class: 'form-control-file' %>
+      </div>
+
+      <%# submit btn %>
+      <div class="d-flex justify-content-center mt-5">
+        <%= f.button :submit, "Creer une équipe", label: "Nouvelle équipe", placeholder: "Nouvelle équipe", class: "btn btn-primary"%>
+      </div>
+    <% end %>
+
+    <%# retour au profile %>
+      <div class="d-flex justify-content-center">
+        <%= link_to "retourner au profile", profile_path, class: "back-btn p-4"%>
+      </div>
+    </div>
+  </div>
 </div>
-
-
- <%# create_table "teams", force: :cascade do |t|
-    t.bigint "owner_id", null: false
-    t.string "name"
-    t.text "description"
-    t.integer "price_per_day"
-    t.integer "success_rate"
-    t.string "dungeon_type"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["owner_id"], name: "index_teams_on_owner_id" %>
