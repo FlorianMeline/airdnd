@@ -8,7 +8,7 @@
 <div class="container d-flex justify-content-center gap-3 p-3">
 
   <div class="row col-3">
-    <%= link_to owner_teams_path, class:"card profile-card" do %>
+    <%= link_to new_owner_team, class:"card profile-card" do %>
       <%= image_tag "new-team.png", class: "profile-img" %>
       <div class="card-body">
         <h5 class="card-title">Créer une équipe</h5>
@@ -18,11 +18,11 @@
   </div>
 
   <div class="row col-3">
-    <%= link_to owner_teams_path, class:"card profile-card" do %>
+    <%= link_to owner_contracts_path, class:"card profile-card" do %>
       <%= image_tag "request.png", class: "profile-img" %>
       <div class="card-body">
-        <h5 class="card-title">Réservation</h5>
-        <p class="card-text">Gerer le statut de vos réservation auprès d'autre propriétaire d'équipes.</p>
+        <h5 class="card-title">Vos contrats</h5>
+        <p class="card-text">Gérer les contrats de vos équipes en cours, et passé.</p>
       </div>
     <% end %>
   </div>
@@ -42,8 +42,8 @@
     <%= link_to contracts_path, class:"card profile-card" do %>
       <%= image_tag "contrats.png", class: "profile-img" %>
       <div class="card-body">
-        <h5 class="card-title">Vos contrats</h5>
-        <p class="card-text">Gerer vos contrats en cours, et passé.</p>
+        <h5 class="card-title">Vos réservations</h5>
+        <p class="card-text">Gérer le statut de vos réservation auprès d'autre propriétaire.</p>
       </div>
     <% end %>
   </div>

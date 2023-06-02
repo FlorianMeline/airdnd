@@ -1,6 +1,6 @@
 class Owner::ContractsController < ApplicationController
   def index
-    @user_contracts = current_user.contracts
+    @user_contracts = current_user.contracts_as_owner
   end
 
   def update

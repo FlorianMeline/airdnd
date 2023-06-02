@@ -12,7 +12,7 @@ class ContractsController < ApplicationController
     @contract = Contract.new(contracts_params)
     @contract.team = @team
     @contract.renter = current_user
-    @contract.status = "pending"
+    @contract.status = "En attente"
     @total_day = (@contract.begin_date.jd..@contract.end_date.jd).count
     @total_price = @total_day * @team.price_per_day
     @contract.total_price = @total_price
