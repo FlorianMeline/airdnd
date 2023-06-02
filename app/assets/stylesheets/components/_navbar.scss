@@ -1,12 +1,42 @@
+.container-fluid{
+  position: relative;
+}
 .navbar-lewagon {
   justify-content: space-between;
-  background: #1D1D1D;
+  background: transparent;
+  // position: fixed;
+  width: 100vw;
+  z-index: 10000;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 80px;
+.navbar-lewagon .navbar-brand {
+  height: 70px;
+}
+
+.image-brand{
+  width: 170px;
+  position: absolute;
+  top: 0px;
+}
+
+.avatar-navbar{
+  position: absolute;
+  height: 105px;
+  width: 105px;
+  object-fit: cover;
+  right: 20px;
+  border-radius: 50%;
+  border: 2px solid $butterscotch;
+}
+
+.dropdown-menu{
+  background-color: $midnight-green;
+}
+
+.dropdown-item{
+  color: white;
 }

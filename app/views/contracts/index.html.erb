@@ -9,6 +9,13 @@
             <h2 class="card-title">  <%= link_to contract.team.name, contract.team, class: "teams-link"%></h2>
             <p id="card-link" class="card-text justify-content-end">Prix du contrat : <%= contract.total_price %> ₡</p>
             <p>Statue de ma demande : <%= contract.status%></p>
+            <% if  contract.status == "En attente" %>
+              <div class="d-flex justify-content-around text-info">En Attente</div>
+              <% elsif contract.status == "accepted" %>
+              <div class="d-flex justify-content-around text-success">Accepté</div>
+              <% else %>
+              <div class="d-flex justify-content-around text-danger">Refusé</div>
+            <% end %>
           </div>
       </div>
     <% end %>
