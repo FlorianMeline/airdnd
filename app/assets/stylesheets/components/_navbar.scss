@@ -3,7 +3,10 @@
 }
 .navbar-lewagon {
   justify-content: space-between;
-  background: #1D1D1D;
+  background: transparent;
+  // position: fixed;
+  width: 100vw;
+  z-index: 10000;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -28,4 +31,12 @@
   right: 20px;
   border-radius: 50%;
   border: 2px solid $butterscotch;
+}
+
+.dropdown-menu{
+  background-color: $midnight-green;
+}
+
+.dropdown-item{
+  color: white;
 }
