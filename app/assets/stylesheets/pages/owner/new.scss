@@ -1,0 +1,34 @@
+
+.new-team-img {
+  border-radius: 10px;
+}
+
+.back-btn {
+  text-decoration: none;
+  text-shadow: 0px 2px 3px black;
+}
+
+.body-img {
+  background-image: asset-url('new-team.png');
+  object-fit: cover;
+  background-repeat: no-repeat;
+  // background-position: top center;
+  border-radius: 20px;
+  // background-size: contain
+  background-position: bottom;
+}
+
+.bloc-form {
+  border: solid 2px $butterscotch;
+  border-radius: 10px;
+  box-shadow: 5px 10px 10px 10px #121212;
+}
+
+.h2-new {
+  text-shadow: 0px 6px 3px black;
+}
+
+.label {
+  // text-shadow: 0px 6px 3px black !important;
+  color: #121212 !important;
+}

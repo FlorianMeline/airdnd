@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resource :profile, only: [:show]
 
-  resources :teams, only: [:index, :show] do
+  resources :teams, only: [:index,:create,:show] do
     resources :contracts, only: [:create]
   end
   resources :contracts, only: [:index]
