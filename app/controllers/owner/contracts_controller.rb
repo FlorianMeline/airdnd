@@ -8,11 +8,11 @@ class Owner::ContractsController < ApplicationController
     @contract.update(user_contracts_params)
 
     if @contract.status == "accepted"
-      flash[:success] = "Contract accepté"
+      flash[:success] = "Contrat accepté"
       redirect_to owner_contracts_path
     else
 
-      flash[:danger] = "Contract refusé"
+      flash[:danger] = "Contrat refusé"
       redirect_to owner_contracts_path
     end
   end

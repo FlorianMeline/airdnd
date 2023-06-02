@@ -1,5 +1,5 @@
 <div class="container padding-title">
-  <div class="border-user-teams"><h1>Mes contracts</h1></div>
+  <div class="border-user-teams"><h1>Mes contrats</h1></div>
   <div class="card-user-teams mt-4">
     <% @user_contracts.each do |user_contract|%>
         <div class="card card-user-team" style="width: 400px;">
@@ -9,7 +9,7 @@
             <p class="card-text">💰 <%= user_contract.total_price %> ₡</p>
             <p class="card-text">Début de quête : <%= user_contract.begin_date %></p>
             <p class="card-text">Fin de quête : <%= user_contract.end_date %></p>
-            <% if  user_contract.status == "en attente" %>
+            <% if  user_contract.status == "En attente" %>
               <div class="d-flex justify-content-around">
                 <%= simple_form_for [:owner, user_contract] do |f| %>
                   <%= f.input :status, label: false, input_html: {value: 'accepted', class:"d-none", }%>
